@@ -1,6 +1,7 @@
 package org.lessons.java.shop;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 public class Prodotto {
     private int code;
@@ -9,8 +10,9 @@ public class Prodotto {
     private BigDecimal price;
     private int iva;
 
-    public Prodotto (int code, String name, String brand, BigDecimal price, int iva) { //Costruttore
-        this.code = code;
+    public Prodotto (String name, String brand, BigDecimal price, int iva) { //Costruttore
+        Random random=new Random();
+        this.code = random.nextInt(1000);
         this.name=name;
         this.brand=brand;
         this.price=price;

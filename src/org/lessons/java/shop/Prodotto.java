@@ -50,7 +50,11 @@ public class Prodotto {
     }
 
     public int getIva(){
-        return this.iva;
+        if(price.compareTo(BigDecimal.ZERO) >0 && iva!=0){
+            return this.iva;
+        } else{
+        return 0;
+        }   
     }
 
     public void setIva (int iva){

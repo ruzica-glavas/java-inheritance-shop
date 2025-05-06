@@ -9,5 +9,8 @@ public class Main {
         Prodotto p = new Prodotto("Ciao", "Gucci",decimal, 15);
         System.out.println(p.getPrice());
         System.out.println(p.getCode());
+
+        Smartphone apple= new Smartphone("Iphone 14", "Apple", decimal, 22, 64);
+        System.out.println(apple);
     }
 }

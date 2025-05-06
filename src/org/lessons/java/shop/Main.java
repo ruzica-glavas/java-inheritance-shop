@@ -21,6 +21,18 @@ public class Main {
         System.out.println("Prezzo con iva inclusa:" + apple.getPriceIva());
         System.out.println(apple.getMemory() + "GB di memoria");
 
+        //Prodotto televisore
+        Televisore samsung= new Televisore("Smart TV", "Samsung", decimal, 22, 100, true);
+
+        System.out.println("Il nome del prodotto:" + samsung.getName());
+        System.out.println("Il nome del brand:" + samsung.getBrand());
+        System.out.println("Il codice del prodotto:" + samsung.getCode());
+        System.out.println("Il prezzo del prodotto:" + samsung.getPrice());
+        System.out.println("L'iva:" + samsung.getIva());
+        System.out.println("Il prezzo con iva inclusa:" + samsung.getPriceIva());
+        System.out.println("Le dimensioni sono:" + samsung.getSize() + " " + "pollici");
+        System.out.println("È una smart tv:" + samsung.getIsSmart());
+
 
 
 

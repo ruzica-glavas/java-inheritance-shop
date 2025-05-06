@@ -23,7 +23,6 @@ public class Televisore extends Prodotto{
     }
 
     public boolean getIsSmart(){
-        isSmart=false;
         return this.isSmart;
     }
 

@@ -1,6 +1,7 @@
 package org.lessons.java.shop;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Random;
 
 public class Prodotto {
@@ -49,17 +50,25 @@ public class Prodotto {
         this.price = price;
     }
 
-    public int getIva(){
-        if(price.compareTo(BigDecimal.ZERO) >0 && iva!=0){
-            return this.iva;
-        } else{
-        return 0;
-        }   
-    }
+   public int getIva(){
+    return this.iva;
+   }
 
     public void setIva (int iva){
         this.iva=iva;
     }
+
+    public BigDecimal getPriceIva(){
+        if(price.compareTo(BigDecimal.ZERO) >0 && iva!=0){
+            BigDecimal ivaDecimal = BigDecimal.valueOf(iva).divide(BigDecimal.valueOf(100));
+            BigDecimal prezzoConIva = price.add (price.multiply(ivaDecimal));
+            return prezzoConIva.setScale(2, RoundingMode.HALF_DOWN);
+        } else{
+        return BigDecimal.ZERO.setScale(2, RoundingMode.HALF_DOWN);
+        }   
+    }
+
+    
 
 }
 

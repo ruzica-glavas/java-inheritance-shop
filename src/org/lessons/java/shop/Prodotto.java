@@ -24,7 +24,7 @@ public class Prodotto {
 
     public int getCode(){   
         return this.code;
-    } //Per il codice c^é bisogno solo del metodo get in quanto vogliamo che sia accessibile solo in lettura
+    } //Per il codice c'é bisogno solo del metodo get in quanto vogliamo che sia accessibile solo in lettura
 
     public String getName(){
         return this.name;
@@ -68,7 +68,15 @@ public class Prodotto {
         }   
     }
 
-    
+    //L'override bisogna farlo per ogni classe che creiamo quindi anche nella classe del padre
+    @Override
+    public String toString(){
+        if(name !=null){
+            return code + " " + name;
+        }
+
+        return null;
+    }
 
 }
 
